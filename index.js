@@ -2,9 +2,9 @@
  * Created by Obscurity on 2016/7/14.
  */
 
-module.exports = function (options) {
-    var options = options || {};
-    var key = options.key || 'koa-asb';
+module.exports = function (opts) {
+    var opts = opts || {};
+    var key = opts.key || 'koa-asb';
 
     return function *asb(next) {
 
