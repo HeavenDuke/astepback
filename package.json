@@ -1,0 +1,33 @@
+{
+  "name": "astepback",
+  "version": "1.0.0",
+  "description": "koa middleware that stores exactly one previous page for further redirection.",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HeavenDuke/astepback.git"
+  },
+  "keywords": [
+    "koa",
+    "redirect",
+    "path",
+    "session"
+  ],
+  "author": "HeavenDuke",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HeavenDuke/astepback/issues"
+  },
+  "homepage": "https://github.com/HeavenDuke/astepback#readme",
+  "devDependencies": {
+    "koa": "latest",
+    "koa-bodyparser": "latest",
+    "koa-session": "latest",
+    "koa-router": "~3.4.0",
+    "mocha": "latest",
+    "supertest": "latest"
+  }
+}
