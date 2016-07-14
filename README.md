@@ -23,9 +23,13 @@ npm install astepback
 [Koa 2(Node >= 0.12.0)](https://github.com/koajs/koa)  
 [koa-session](https://github.com/koajs/session)
 
-
 ## Configuration
 ```javascript
+var asb = require('astepback');
+var koa = require('koa');
+var session = require('koa-session');
+var bodyParser = require('koa-bodyparser');
+
 var server = koa();
 server.use(bodyParser());
 server.use(session(server));
