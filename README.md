@@ -8,7 +8,7 @@
 [![Coverage Status][coverage-image]][coverage-image]
 
 
-[coverage-image]: https://coveralls.io/github/HeavenDuke/astepback
+[coverage-image]: https://coveralls.io/repos/github/HeavenDuke/astepback/badge.svg?branch=master
 [npm-image]: https://img.shields.io/npm/v/astepback.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/astepback
 [david-image]: https://david-dm.org/HeavenDuke/astepback.svg
