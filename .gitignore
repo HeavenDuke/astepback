@@ -38,3 +38,6 @@ jspm_packages
 
 # Idea configuration directory
 .idea
+
+# Istanbul coverage directory
+coverage

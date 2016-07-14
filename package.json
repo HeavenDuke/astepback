@@ -4,7 +4,7 @@
   "description": "koa middleware that stores exactly one previous page for further redirection.",
   "main": "index.js",
   "scripts": {
-    "test": "mocha --harmony"
+    "test": "node --harmony ./node_modules/.bin/istanbul cover ./node_modules/.bin/_mocha -- -u exports -R spec"
   },
   "repository": {
     "type": "git",
@@ -24,6 +24,7 @@
   "homepage": "https://github.com/HeavenDuke/astepback#readme",
   "devDependencies": {
     "coveralls": "^2.11.11",
+    "istanbul": "^0.4.4",
     "koa": "latest",
     "koa-bodyparser": "latest",
     "koa-router": "~3.4.0",
