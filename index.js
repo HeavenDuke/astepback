@@ -5,6 +5,7 @@
 module.exports = function (opts) {
     var opts = opts || {};
     var key = opts.key || 'koa-asb';
+    var defaultPath = opts.defaultPath || '/';
 
     return function *asb(next) {
 
@@ -12,12 +13,10 @@ module.exports = function (opts) {
 
         var data = this.session[key];
 
-        var defaultValue = '/';
-
         Object.defineProperty(this, 'asb', {
             enumerable: true,
             get: function() {
-                return data || defaultValue;
+                return data || defaultPath;
             },
             set: function(val) {
                 this.session[key] = val;

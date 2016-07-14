@@ -48,9 +48,12 @@ server.get('/current', function *(next) {
 ```
 
 ## Notice
-The default value of this.asb is ```/``` which is usually the default path and use ```session['koa-asb']``` as default storage, you can reset the session key through the following method:
+The default value of this.asb is ```/``` which is usually the default path and use ```session['koa-asb']``` as default storage, you can reset the default path and session key through the following method:
 ```javascript
-server.use(asb({key: "foo"));
+server.use(asb({
+    key: "foo",         // session storage key
+    defaultPath: "/foo" // default redirection path
+});
 ```
 
 ## License

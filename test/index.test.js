@@ -100,6 +100,38 @@ describe('koa astepback middleware for koa 2.0', function () {
                         .expect('location', '/').expect(302, done);
                 });
         });
+
+        it('to customized default url when url is not stored', function (done) {
+            var server = koa();
+            server.use(bodyParser());
+            server.use(session(server));
+            server.keys = ['heavenduke'];
+            server.use(asb({defaultPath: '/foo'}));
+            server.use(router(server));
+
+            server.get('/foo', function *(next) {
+                this.body = {title: "basic"};
+            });
+
+            server.get('/previous', function *(next) {
+                this.body = {title: "previous"};
+            });
+
+            server.get('/current', function *(next) {
+                this.redirect(this.asb);
+            });
+
+            var agent = request.agent(server.listen());
+            agent.get('/previous')
+                .send()
+                .end(function (err, res) {
+                    var cookieString = res.headers['set-cookie'] ? res.headers['set-cookie'].join(';') : null;
+                    agent.get('/current')
+                        .set("Cookie", cookieString)
+                        .send()
+                        .expect('location', '/foo').expect(302, done);
+                });
+        });
     });
 
     describe('should save to session', function () {
