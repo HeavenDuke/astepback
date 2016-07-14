@@ -5,7 +5,10 @@
 [![build status][travis-image]][travis-url]
 [![npm download][download-image]][download-url]
 [![dependencies][david-image]][david-image]
+[![Coverage Status][coverage-image]][coverage-image]
 
+
+[coverage-image]: https://coveralls.io/github/HeavenDuke/astepback
 [npm-image]: https://img.shields.io/npm/v/astepback.svg?style=flat-square
 [npm-url]: https://npmjs.org/package/astepback
 [david-image]: https://david-dm.org/HeavenDuke/astepback.svg
@@ -57,7 +60,7 @@ The default value of this.asb is ```/``` which is usually the default path of a 
 server.use(asb({
     key: "foo",         // session storage key
     defaultPath: "/foo" // default redirection path
-});
+}));
 ```
 
 ## License
