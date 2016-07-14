@@ -1,6 +1,6 @@
 {
   "name": "astepback",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "koa middleware that stores exactly one previous page for further redirection.",
   "main": "index.js",
   "scripts": {
@@ -23,11 +23,13 @@
   },
   "homepage": "https://github.com/HeavenDuke/astepback#readme",
   "devDependencies": {
+    "coveralls": "^2.11.11",
     "koa": "latest",
     "koa-bodyparser": "latest",
-    "koa-session": "latest",
     "koa-router": "~3.4.0",
+    "koa-session": "latest",
     "mocha": "latest",
+    "mocha-lcov-reporter": "^1.2.0",
     "supertest": "latest"
   }
 }
